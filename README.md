@@ -21,3 +21,12 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Add OAuth
+- Go to [settings]( https://github.com/settings/applications/new) in your github profile 
+
+- Fill in the information
+
+e.g., DEV discuss / http://localhost:3000/ / description / http://localhost:3000/api/auth/callback/github
+
+- Click on register application button which will bring up your client ID and secret. Copy these to our .env file
