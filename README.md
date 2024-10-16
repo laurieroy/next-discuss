@@ -6,7 +6,8 @@ React 18 with Next 14.0.2
 CSS: tailwindcss
 UI: nextui
 Auth: Authjs/nextauth
-Framer Motion
+DB: Prisma initially using SQLite
+Framer Motion (required by nextui)
 
 
 
