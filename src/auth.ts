@@ -24,16 +24,17 @@ export const {
       clientSecret: GITHUB_CLIENT_SECRET,
     }),
   ],
-  callbacks: {
-    // This is to fix a bug in next auth
-    async session({ session, user }) {
-      if (session && user) {
-        session.user.id = user.id;
-      }
+  trustHost: true,
+  // callbacks: {
+  //   // This is to fix a bug in next auth
+  //   async session({ session, user }) {
+  //     if (session && user) {
+  //       session.user.id = user.id;
+  //     }
 
-      return session;
-    },
-  },
+  //     return session;
+  //   },
+  // },
 });
 // function Github(arg0: { clientId: string; clientSecret: string; }): import("next-auth/providers").Provider {
 //   throw new Error("Function not implemented.");
