@@ -2,12 +2,12 @@ This is a project in Stephen Grider's NextJS [Udemy course](https://www.udemy.co
 
 
 ## Tech Stack
-React 18 with Next 14.0.2
-CSS: tailwindcss
-UI: nextui
-Auth: Authjs/nextauth
-DB: Prisma initially using SQLite
-Framer Motion (required by nextui)
+- React 18 with Next 14.0.2
+- CSS: tailwindcss
+- UI: nextui + Framer Motion 
+- Auth: Authjs/nextauth
+- DB: Prisma initially using SQLite
+
 
 
 
