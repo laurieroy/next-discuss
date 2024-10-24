@@ -135,3 +135,6 @@ in branch newTopic, i get a proper error back
 }
 
 now to flatten
+
+  // test db error by     throw new Error("Not implemented");
+  // after try
