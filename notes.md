@@ -75,3 +75,63 @@ action: (in interface) _form?: string[];
     errors: {},
   };
 client: {formState.errors._form?.join(", ")}
+
+in branch newTopic, i get a proper error back
+.1/node_modules/next/dist/server/base-server.js:798:17) {
+  issues: [
+    {
+      code: 'too_small',
+      minimum: 3,
+      type: 'string',
+      inclusive: true,
+      exact: false,
+      message: 'Name must be at least 3 characters',
+      path: [Array]
+    },
+    {
+      validation: 'regex',
+      code: 'invalid_string',
+      message: 'Name must not contain any spaces and must be lowercase or dashes',
+      path: [Array]
+    },
+    {
+      code: 'too_small',
+      minimum: 10,
+      type: 'string',
+      inclusive: true,
+      exact: false,
+      message: 'Description must be at least 10 characters',
+      path: [Array]
+    }
+  ],
+  addIssue: [Function (anonymous)],
+  addIssues: [Function (anonymous)],
+  errors: [
+    {
+      code: 'too_small',
+      minimum: 3,
+      type: 'string',
+      inclusive: true,
+      exact: false,
+      message: 'Name must be at least 3 characters',
+      path: [Array]
+    },
+    {
+      validation: 'regex',
+      code: 'invalid_string',
+      message: 'Name must not contain any spaces and must be lowercase or dashes',
+      path: [Array]
+    },
+    {
+      code: 'too_small',
+      minimum: 10,
+      type: 'string',
+      inclusive: true,
+      exact: false,
+      message: 'Description must be at least 10 characters',
+      path: [Array]
+    }
+  ]
+}
+
+now to flatten
