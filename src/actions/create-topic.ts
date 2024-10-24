@@ -17,18 +17,30 @@ const createTopicSchema = z.object({
     .max(1000, { message: "Description must be less than 1000 characters" }),
 });
 
-export async function topicCreate(formData: FormData) {
+interface CreateTopicFormState {
+  errors: {
+    name?: string[];
+    description?: string[];
+  };
+}
+
+// interface CreateTopicSchema extends z.infer<typeof createTopicSchema> {}
+
+export async function topicCreate(
+  formState: CreateTopicFormState,
+  formData: FormData
+): Promise<CreateTopicFormState> {
   const result = createTopicSchema.safeParse({
     name: formData.get("name"),
     description: formData.get("description"),
   });
 
-  console.log(result)
   if (!result.success) {
-   console.log(result.error.flatten().fieldErrors);
-    // return result.error;
+    return { errors: result.error.flatten().fieldErrors };
   }
 
-
+  return {
+    errors: {},
+  };
   // TODO: revalidate Home page
 }
